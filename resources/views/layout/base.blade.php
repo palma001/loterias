@@ -11,14 +11,14 @@
     <title>Loteria de animales</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="{{ asset('css/sb-admin.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/sb-admin.css') }}" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="{{ asset('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ secure_asset('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ secure_asset('css/style.css') }}" rel="stylesheet" type="text/css">
     @yield('css')
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -93,14 +93,14 @@
 <!-- /#wrapper -->
 
 <!-- jQuery -->
-<script src="{{ asset('js/jquery.js') }}"></script>
+<script src="{{ secure_asset('js/jquery.js') }}"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="{{ asset('js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('js/angular.min.js') }}"></script>
-<script src="{{ asset('js/module.js') }}"></script>
-<script src="{{ asset('js/AnimalController.js') }}"></script>
-<script src="{{ asset('js/SortController.js') }}"></script>
+<script src="{{ secure_asset('js/bootstrap.min.js') }}"></script>
+<script src="{{ secure_asset('js/angular.min.js') }}"></script>
+<script src="{{ secure_asset('js/module.js') }}"></script>
+<script src="{{ secure_asset('js/AnimalController.js') }}"></script>
+<script src="{{ secure_asset('js/SortController.js') }}"></script>
 @yield('js')
 
 </body>
