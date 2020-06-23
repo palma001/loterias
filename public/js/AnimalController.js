@@ -2,7 +2,6 @@ angular.module('AnimalModule').controller('AnimalController', [
     '$scope',
     '$http',
     function($scope, $http) {
-
         $scope.addToTicket = (animal) => {
             animal.amount = 0;
             animal.error = {
@@ -162,7 +161,6 @@ angular.module('AnimalModule').controller('AnimalController', [
             var animal;
             var activeSorts = 0;
             var amount;
-
             // Cuento los sorteos activos
             for (var s in $scope.data.sorts) {
                 if ($scope.data.sorts[s]) {

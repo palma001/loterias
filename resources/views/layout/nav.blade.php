@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand navbar-light bg-light">
     @if(Auth::check())
-    <a class="navbar-brand" href="{{ route('user.index') }}">
+    <a class="navbar-brand" href="{{ route('user.index',  session('loteria')) }}">
         <img src="https://getbootstrap.com/docs/4.1/assets/img/favicons/favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
         <span class="title-page">
             Loteria de animalito

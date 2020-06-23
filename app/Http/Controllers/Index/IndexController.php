@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Index;
 
-use App\User;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Index\AuthRequest;
+use App\Sort;
+use App\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 /**
@@ -43,7 +44,11 @@ class IndexController extends Controller
             return redirect()->route('user.list');
         }
 
-        return redirect()->route('user.index');
+        $first = Sort::first();
+
+        session(['loteria' => $first->slug]);
+        
+        return redirect()->route('user.index', session('loteria'));
     }
 
     /**

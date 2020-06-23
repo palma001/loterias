@@ -27,38 +27,36 @@ class IndexController extends Controller
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function index() {
-        $sorts = Sort::all();
+    public function index(Request $request) {
+        $sort = Sort::where('slug', $request->slug)
+            ->with(['dailySorts' => function ($q) {
+               $q->orderBy('time_sort'); 
+            }])
+            ->firstOrfail();
+
         $activeSorts = [];
         $seconds = 0;
         $now = new \DateTime();
+        // Filtro solo los sorteos activos
+        foreach ($sort->dailySorts as $ds) {
+            if ($ds->hasActive()) {
+                if (!isset($sort->dailySorts[$sort->id])) {
+                    $activeSorts[] = [];
+                }
 
-        foreach ($sorts as $sort) {
-            $dailySorts = $sort->dailySorts()->orderBy('time_sort')->get();
-
-            // Filtro solo los sorteos activos
-            foreach ($dailySorts as $ds) {
-                if ($ds->hasActive()) {
-                    if (! isset($activeSorts[$sort->id])) {
-                        $activeSorts[$sort->id] = [];
-                    }
-
-                    $activeSorts[$sort->id][] = $ds;
-
-                    if ($seconds === 0) {
-                        // Guardo los segundos restantes para el primer sorteo
-                        $tenMinuteLess = $ds->getTimeSort()->modify('-10 minutes');
-                        $seconds = ($now->diff($tenMinuteLess)->h * 3600) + ($now->diff($tenMinuteLess)->i * 60) + ($now->diff($tenMinuteLess)->s);
-                    }
+                $activeSorts[] = $ds;
+                if ($seconds === 0) {
+                    // Guardo los segundos restantes para el primer sorteo
+                    $tenMinuteLess = $ds->getTimeSort()->modify('-10 minutes');
+                    $seconds = ($now->diff($tenMinuteLess)->h * 3600) + ($now->diff($tenMinuteLess)->i * 60) + ($now->diff($tenMinuteLess)->s);
                 }
             }
         }
-
-        $animals = $sorts[0]->animals;
+        $animals = $sort->animals;
         $animals = $this->getDailyLimit($animals);
-
+        $sort->dailySorts = $activeSorts;
         return view('user.create')->with([
-            'sorts' => $activeSorts,
+            'sort' => $sort,
             'animals' => $animals,
             'seconds' => $seconds,
         ]);
@@ -118,7 +116,7 @@ class IndexController extends Controller
 
         $this->sessionMessages('Ticket registrado');
 
-        return redirect()->route('user.index');
+        return redirect()->route('user.index',  session('loteria'));
     }
 
     /**

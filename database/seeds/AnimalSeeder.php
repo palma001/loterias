@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Seeder;
 use App\Animal;
 use App\Sort;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 class AnimalSeeder extends Seeder
 {
@@ -17,6 +18,7 @@ class AnimalSeeder extends Seeder
         $sort = new Sort();
         $sort->description = 'Lotto Activo';
         $sort->pay_per_100 = 3000;
+        $sort->slug = Str::slug('Lotto Activo');
         $sort->folder = 'lottoActivo';
         $sort->daily_limit = 10000;
         $sort->save();
@@ -247,6 +249,7 @@ class AnimalSeeder extends Seeder
         // Creando el sorteo
         $sort = new Sort();
         $sort->description = 'La granjita';
+        $sort->slug = Str::slug('La granjita');
         $sort->pay_per_100 = 3000;
         $sort->folder = 'lottoActivo';
         $sort->daily_limit = 10000;

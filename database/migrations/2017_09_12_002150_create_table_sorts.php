@@ -16,6 +16,7 @@ class CreateTableSorts extends Migration
         Schema::create('sorts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('description');
+            $table->string('slug');
             $table->decimal('pay_per_100');
             $table->string('folder', 20);
             $table->decimal('daily_limit');

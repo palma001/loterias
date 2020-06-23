@@ -50,9 +50,9 @@
                             <td>
                                 @if($animal = $dailySort->getAnimalGainToDate($date))
                                     <img
-                                            src="{{ asset('img/' . $dailySort->sort->folder . '/' . $animal->getClearName() . '.jpg') }}"
-                                            alt="{{ $animal->name }}"
-                                            style="max-width: 30px">
+                                        src="{{ asset('img/' . $dailySort->sort->folder . '/' . $animal->getClearName() . '.png') }}"
+                                        alt="{{ $animal->name }}"
+                                        style="max-width: 30px">
                                     {{ $animal->name }}
                                 @else
                                     -

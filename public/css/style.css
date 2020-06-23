@@ -104,6 +104,12 @@
     border: solid;
     border-color:  #08a589;
 }
+.time-sort:hover {
+   cursor: pointer;
+}
+.cant-animalito {
+    background-color: red;
+}
 .section-animals__item .selected {
     max-width: 100%;
     border: solid 4px;

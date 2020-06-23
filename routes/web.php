@@ -18,7 +18,7 @@ Route::get('logout', ['uses' => 'Index\IndexController@logout', 'as' => 'index.l
 
 //  RUTAS USER
 Route::group(['prefix' => 'user', 'middleware' => 'user'], function() {
-    Route::get('', ['uses' => 'User\IndexController@index', 'as' => 'user.index']);
+    Route::get('game/{slug}', 'User\IndexController@index')->name('user.index');
     Route::post('/create', ['uses' => 'User\IndexController@store', 'as' => 'user.create']);
     Route::get('/list', ['uses' => 'User\IndexController@listTicket', 'as' => 'user.list']);
     Route::get('/ticket/lastTickets', ['uses' => 'User\IndexController@getLastTickets', 'as' => 'user.lastTickets']);
