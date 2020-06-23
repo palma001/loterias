@@ -1,27 +1,11 @@
-.page-header {
-    margin-bottom: 5px;
-    border-color: #048870;
-}
 #wrapper {
     padding-left: 0;
 }
-.navbar-inverse {
+/*.navbar-inverse {
     background-color: #08a589;
     border-color: #08a589;
-}
-.navbar-inverse .navbar-brand {
-    color: #fff;
-}
-.top-nav>li>a {
-    color: #fff;
-}
-.top-nav>li>a:hover,
-.top-nav>li>a:focus,
-.top-nav>.open>a,
-.top-nav>.open>a:hover,
-.top-nav>.open>a:focus {
-    background-color: #048870;
-}
+}*/
+
 .breadcrumb {
     background-color: rgba(16, 218, 182, .3);
 }
@@ -81,17 +65,13 @@
     display: block;
     text-align: right;
 }
-/* SECTION ANIMAL */
-.section-animals > .col-sm-5 {
-    border-right: solid 1px #eee;
-    padding-bottom: 20px;
-}
 .section-animals > .col-sm-7 table {
     font-size: 16px;
 }
 .section-animals .animal-list {
-    max-height: 500px;
-    overflow: auto;
+    background-color: #FFF8E1;
+    border-radius: 10px;
+    padding: 35px;
 }
 .section-animals > .col-sm-7 table .error {
     color: #f42a09;
@@ -101,16 +81,34 @@
     text-align: center;
     margin: 0 0 10px 0;
     padding: 5px;
-    border-bottom: solid #048870 1px;
 }
 .section-animals__select {
     margin-bottom: 20px;
+    padding: 20px;
 }
 .section-animals__item img {
-    max-width: 50px;
+    max-width: 90%;
+    border-radius: 15px;
+}
+.section-animals__item img:hover {
+    max-width: 100%;
+}
+.time-sort {
+    background-color: #FFF8E1;
+    position: fixed;
+    bottom: 5px;
+    left: 10px;
+    z-index: 1;
+    padding: 5px 10px 0px;
+    border-radius: 20px;
+    border: solid;
+    border-color:  #08a589;
 }
 .section-animals__item .selected {
-    color: #08a589;
+    max-width: 100%;
+    border: solid 4px;
+    border-color: #08a589;
+    border-radius: 15px;
 }
 .section-animals__item p {
     font-size: 16px;
@@ -135,4 +133,10 @@
 }
 .section-animals .form-group {
     float: left;
+}
+
+@media (max-width: 695px){
+  .title-page {
+    display: none;
+  }
 }

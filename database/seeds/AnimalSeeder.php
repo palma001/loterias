@@ -23,229 +23,223 @@ class AnimalSeeder extends Seeder
 
         // Cargando los animales
         $animal = new Animal();
-        $animal->name = 'Delfín';
+        $animal->name = 'Nro0';
         $animal->number = '0';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Ballena';
-        $animal->number = '00';
-        $animal->sort_id = $sort->id;
-        $animal->save();
-
-        $animal = new Animal();
-        $animal->name = 'Carnero';
+        $animal->name = 'Nro1';
         $animal->number = '1';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Toro';
+        $animal->name = 'Nro2';
         $animal->number = '2';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Ciempies';
+        $animal->name = 'Nro3';
         $animal->number = '3';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Alacrán';
+        $animal->name = 'Nro4';
         $animal->number = '4';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'León';
+        $animal->name = 'Nro5';
         $animal->number = '5';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Rana';
+        $animal->name = 'Nro6';
         $animal->number = '6';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Perico';
+        $animal->name = 'Nro7';
         $animal->number = '7';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Ratón';
+        $animal->name = 'Nro8';
         $animal->number = '8';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Águila';
+        $animal->name = 'Nro9';
         $animal->number = '9';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Tigre';
+        $animal->name = 'Nro10';
         $animal->number = '10';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Gato';
+        $animal->name = 'Nro11';
         $animal->number = '11';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Caballo';
+        $animal->name = 'Nro12';
         $animal->number = '12';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Mono';
+        $animal->name = 'Nro13';
         $animal->number = '13';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Paloma';
+        $animal->name = 'Nro14';
         $animal->number = '14';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Zorro';
+        $animal->name = 'Nro15';
         $animal->number = '15';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Oso';
+        $animal->name = 'Nro16';
         $animal->number = '16';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Pavo';
+        $animal->name = 'Nro17';
         $animal->number = '17';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Burro';
+        $animal->name = 'Nro18';
         $animal->number = '18';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Chivo';
+        $animal->name = 'Nro19';
         $animal->number = '19';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Cerdo';
+        $animal->name = 'Nro20';
         $animal->number = '20';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Gallo';
+        $animal->name = 'Nro21';
         $animal->number = '21';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Camello';
+        $animal->name = 'Nro22';
         $animal->number = '22';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Cebra';
+        $animal->name = 'Nro23';
         $animal->number = '23';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Iguana';
+        $animal->name = 'Nro24';
         $animal->number = '24';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Gallina';
+        $animal->name = 'Nro25';
         $animal->number = '25';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Vaca';
+        $animal->name = 'Nro26';
         $animal->number = '26';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Perro';
+        $animal->name = 'Nro27';
         $animal->number = '27';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Zamuro';
+        $animal->name = 'Nro28';
         $animal->number = '28';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Elefante';
+        $animal->name = 'Nro29';
         $animal->number = '29';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Caimán';
+        $animal->name = 'Nro30';
         $animal->number = '30';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Lapa';
+        $animal->name = 'Nro31';
         $animal->number = '31';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Ardilla';
+        $animal->name = 'Nro32';
         $animal->number = '32';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Pez';
+        $animal->name = 'Nro33';
         $animal->number = '33';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Venado';
+        $animal->name = 'Nro34';
         $animal->number = '34';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Jirafa';
+        $animal->name = 'Nro35';
         $animal->number = '35';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Culebra';
+        $animal->name = 'Nro36';
         $animal->number = '36';
         $animal->sort_id = $sort->id;
         $animal->save();
@@ -260,229 +254,223 @@ class AnimalSeeder extends Seeder
 
         // Cargando los animales
         $animal = new Animal();
-        $animal->name = 'Delfín';
+        $animal->name = 'Nro0';
         $animal->number = '0';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Ballena';
-        $animal->number = '00';
-        $animal->sort_id = $sort->id;
-        $animal->save();
-
-        $animal = new Animal();
-        $animal->name = 'Carnero';
+        $animal->name = 'Nro1';
         $animal->number = '1';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Toro';
+        $animal->name = 'Nro2';
         $animal->number = '2';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Ciempies';
+        $animal->name = 'Nro3';
         $animal->number = '3';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Alacrán';
+        $animal->name = 'Nro4';
         $animal->number = '4';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'León';
+        $animal->name = 'Nro5';
         $animal->number = '5';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Rana';
+        $animal->name = 'Nro6';
         $animal->number = '6';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Perico';
+        $animal->name = 'Nro7';
         $animal->number = '7';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Ratón';
+        $animal->name = 'Nro8';
         $animal->number = '8';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Águila';
+        $animal->name = 'Nro9';
         $animal->number = '9';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Tigre';
+        $animal->name = 'Nro10';
         $animal->number = '10';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Gato';
+        $animal->name = 'Nro11';
         $animal->number = '11';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Caballo';
+        $animal->name = 'Nro12';
         $animal->number = '12';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Mono';
+        $animal->name = 'Nro13';
         $animal->number = '13';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Paloma';
+        $animal->name = 'Nro14';
         $animal->number = '14';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Zorro';
+        $animal->name = 'Nro15';
         $animal->number = '15';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Oso';
+        $animal->name = 'Nro16';
         $animal->number = '16';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Pavo';
+        $animal->name = 'Nro17';
         $animal->number = '17';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Burro';
+        $animal->name = 'Nro18';
         $animal->number = '18';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Chivo';
+        $animal->name = 'Nro19';
         $animal->number = '19';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Cerdo';
+        $animal->name = 'Nro20';
         $animal->number = '20';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Gallo';
+        $animal->name = 'Nro21';
         $animal->number = '21';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Camello';
+        $animal->name = 'Nro22';
         $animal->number = '22';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Cebra';
+        $animal->name = 'Nro23';
         $animal->number = '23';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Iguana';
+        $animal->name = 'Nro24';
         $animal->number = '24';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Gallina';
+        $animal->name = 'Nro25';
         $animal->number = '25';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Vaca';
+        $animal->name = 'Nro26';
         $animal->number = '26';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Perro';
+        $animal->name = 'Nro27';
         $animal->number = '27';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Zamuro';
+        $animal->name = 'Nro28';
         $animal->number = '28';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Elefante';
+        $animal->name = 'Nro29';
         $animal->number = '29';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Caimán';
+        $animal->name = 'Nro30';
         $animal->number = '30';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Lapa';
+        $animal->name = 'Nro31';
         $animal->number = '31';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Ardilla';
+        $animal->name = 'Nro32';
         $animal->number = '32';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Pez';
+        $animal->name = 'Nro33';
         $animal->number = '33';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Venado';
+        $animal->name = 'Nro34';
         $animal->number = '34';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Jirafa';
+        $animal->name = 'Nro35';
         $animal->number = '35';
         $animal->sort_id = $sort->id;
         $animal->save();
 
         $animal = new Animal();
-        $animal->name = 'Culebra';
+        $animal->name = 'Nro36';
         $animal->number = '36';
         $animal->sort_id = $sort->id;
         $animal->save();

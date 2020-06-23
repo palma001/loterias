@@ -11,14 +11,14 @@
     <title>Loteria de animales</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="{{ secure_asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('bootstrap-4/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="{{ secure_asset('css/sb-admin.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('css/sb-admin.css') }}" rel="stylesheet"> --}}
 
     <!-- Custom Fonts -->
-    <link href="{{ secure_asset('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ secure_asset('css/style.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
     @yield('css')
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -33,17 +33,12 @@
 <body ng-app="AnimalModule">
 
 <div id="wrapper">
-
     @include('layout.nav')
-
-    <div id="page-wrapper">
-
-        <div class="container-fluid">
-
+    <div>
+        <div class="container">
             <!-- Page Heading -->
             <div class="row">
                 <div class="col-lg-12">
-
                     @if(Session::has('alert-message') && Session::has('alert-type'))
                         <div class="alert {{ Session::get('alert-type') }} alert-dismissible" role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -56,25 +51,20 @@
                     @endif
 
                     @if($errors->any())
-
                         <div class="alert alert-danger alert-dismissible" role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-
                             <ul>
                                 @foreach($errors->all() as $error)
                                     <li>{{ $error }}</li>
                                 @endforeach
                             </ul>
-
                         </div>
-
                     @endif
-
-                    <h1 class="page-header">
+              {{--       <h1 class="page-header">
                         @yield('header-title')
                         <small>@yield('header-subtitle')</small>
                     </h1>
-                    @yield('current-position')
+                    @yield('current-position') --}}
 
                     <main>
                         @yield('content')
@@ -93,14 +83,14 @@
 <!-- /#wrapper -->
 
 <!-- jQuery -->
-<script src="{{ secure_asset('js/jquery.js') }}"></script>
+<script src="{{ asset('js/jquery.js') }}"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="{{ secure_asset('js/bootstrap.min.js') }}"></script>
-<script src="{{ secure_asset('js/angular.min.js') }}"></script>
-<script src="{{ secure_asset('js/module.js') }}"></script>
-<script src="{{ secure_asset('js/AnimalController.js') }}"></script>
-<script src="{{ secure_asset('js/SortController.js') }}"></script>
+<script src="{{ asset('bootstrap-4/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('js/angular.min.js') }}"></script>
+<script src="{{ asset('js/module.js') }}"></script>
+<script src="{{ asset('js/AnimalController.js') }}"></script>
+<script src="{{ asset('js/SortController.js') }}"></script>
 @yield('js')
 
 </body>

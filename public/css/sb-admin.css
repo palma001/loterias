@@ -228,14 +228,14 @@ ul.alert-dropdown {
     max-width: 200px;
     padding: 1rem;
 }
-.navbar-inverse .navbar-nav>li>a {
+/*.navbar-inverse .navbar-nav>li>a {
     color: #555;
-}
-.side-nav li a:hover, .side-nav li a:focus {
+}*/
+/*.side-nav li a:hover, .side-nav li a:focus {
     background-color: #555 !important;
-}
-.navbar-inverse .navbar-nav>.active>a,
+}*/
+/*.navbar-inverse .navbar-nav>.active>a,
 .navbar-inverse .navbar-nav>.active>a:focus,
 .navbar-inverse .navbar-nav>.active>a:hover {
     background-color: #555;
-}
+}*/
