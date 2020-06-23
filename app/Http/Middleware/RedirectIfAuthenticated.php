@@ -18,7 +18,7 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::check()) {
-            return redirect()->route('user.index');
+            return redirect()->route('user.index', session('loteria'));
         }
 
         return $next($request);
