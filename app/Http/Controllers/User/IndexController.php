@@ -41,7 +41,7 @@ class IndexController extends Controller
         foreach ($sort->dailySorts as $ds) {
             if ($ds->hasActive()) {
                 if (!isset($sort->dailySorts[$sort->id])) {
-                    $activeSorts[] = [];
+                    $activeSorts = [];
                 }
 
                 $activeSorts[] = $ds;

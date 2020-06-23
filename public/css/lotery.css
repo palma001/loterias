@@ -1,0 +1,21 @@
+body {
+    background: rgba(230,145,0,1);
+    background: -moz-linear-gradient(left, rgba(230,145,0,1) 0%, rgba(255,214,153,1) 0%, rgba(235,145,0,1) 0%, rgba(246,176,65,1) 53%, rgba(255,202,117,1) 96%, rgba(255,202,117,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(230,145,0,1)), color-stop(0%, rgba(255,214,153,1)), color-stop(0%, rgba(235,145,0,1)), color-stop(53%, rgba(246,176,65,1)), color-stop(96%, rgba(255,202,117,1)), color-stop(100%, rgba(255,202,117,1)));
+    background: -webkit-linear-gradient(left, rgba(230,145,0,1) 0%, rgba(255,214,153,1) 0%, rgba(235,145,0,1) 0%, rgba(246,176,65,1) 53%, rgba(255,202,117,1) 96%, rgba(255,202,117,1) 100%);
+    background: -o-linear-gradient(left, rgba(230,145,0,1) 0%, rgba(255,214,153,1) 0%, rgba(235,145,0,1) 0%, rgba(246,176,65,1) 53%, rgba(255,202,117,1) 96%, rgba(255,202,117,1) 100%);
+    background: -ms-linear-gradient(left, rgba(230,145,0,1) 0%, rgba(255,214,153,1) 0%, rgba(235,145,0,1) 0%, rgba(246,176,65,1) 53%, rgba(255,202,117,1) 96%, rgba(255,202,117,1) 100%);
+    background: linear-gradient(to right, rgba(230,145,0,1) 0%, rgba(255,214,153,1) 0%, rgba(235,145,0,1) 0%, rgba(246,176,65,1) 53%, rgba(255,202,117,1) 96%, rgba(255,202,117,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e69100', endColorstr='#ffca75', GradientType=1 );
+}
+
+.title-lotery {
+    background:  #FFF8E1;
+    max-width: 40%;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.title-lotery h4{
+    font-size: 20px;
+}

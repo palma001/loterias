@@ -40,13 +40,13 @@ class IndexController extends Controller
             return redirect()->route('index.login');
         }
 
+        $first = Sort::first();
+        session(['loteria' => $first->slug]);
+
         if (Auth::user()->level === User::LEVEL_ADMIN) {
             return redirect()->route('user.list');
         }
 
-        $first = Sort::first();
-
-        session(['loteria' => $first->slug]);
         
         return redirect()->route('user.index', session('loteria'));
     }
