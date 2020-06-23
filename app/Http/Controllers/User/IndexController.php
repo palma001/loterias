@@ -76,7 +76,7 @@ class IndexController extends Controller
                 DB::rollback();
                 $this->sessionMessages('Debe seleccionar al menos un sorteo', 'alert-danger');
 
-                return redirect()->route('user.index');
+                return redirect()->route('user.index', session('lotaria'));
             }
 
             foreach ($request->sorts as $id => $ds) {
@@ -86,7 +86,7 @@ class IndexController extends Controller
                     DB::rollback();
                     $this->sessionMessages('Este ticket posee sorteos cerrados', 'alert-danger');
 
-                    return redirect()->route('user.index');
+                    return redirect()->route('user.index', session('lotaria'));
                 }
             }
 

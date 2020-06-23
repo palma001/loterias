@@ -27,59 +27,47 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <body ng-app="AnimalModule">
 
-<div id="wrapper">
-    @include('layout.nav')
-    <div>
-        <div class="container">
-            <!-- Page Heading -->
-            <div class="row">
-                <div class="col-lg-12">
-                    @if(Session::has('alert-message') && Session::has('alert-type'))
-                        <div class="alert {{ Session::get('alert-type') }} alert-dismissible" role="alert">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-
-                            <ul>
-                                <li>{{ Session::get('alert-message') }}</li>
-                            </ul>
-
-                        </div>
-                    @endif
-
-                    @if($errors->any())
-                        <div class="alert alert-danger alert-dismissible" role="alert">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <ul>
-                                @foreach($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
-              {{--       <h1 class="page-header">
-                        @yield('header-title')
-                        <small>@yield('header-subtitle')</small>
-                    </h1>
-                    @yield('current-position') --}}
-
-                    <main>
-                        @yield('content')
-                    </main>
+    <div id="wrapper">
+        @include('layout.nav')
+        <div>
+            <div class="container">
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        @if(Session::has('alert-message') && Session::has('alert-type'))
+                            <div class="alert {{ Session::get('alert-type') }} alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <ul>
+                                    <li>{{ Session::get('alert-message') }}</li>
+                                </ul>
+                            </div>
+                        @endif
+                        @if($errors->any())
+                            <div class="alert alert-danger alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <ul>
+                                    @foreach($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        <main>
+                            @yield('content')
+                        </main>
+                    </div>
                 </div>
+                <!-- /.row -->
             </div>
-            <!-- /.row -->
+            <!-- /.container-fluid -->
 
         </div>
-        <!-- /.container-fluid -->
-
+        <!-- /#page-wrapper -->
     </div>
-    <!-- /#page-wrapper -->
-
-</div>
 <!-- /#wrapper -->
 
 <!-- jQuery -->

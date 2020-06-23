@@ -1,6 +1,4 @@
-#wrapper {
-    padding-left: 0;
-}
+
 /*.navbar-inverse {
     background-color: #08a589;
     border-color: #08a589;
@@ -26,7 +24,6 @@
     color: #08a589;
 }
 .gain {
-    background-color: #08a589;
     color: #fff;
     padding: 5px;
     font-size: 12px;
@@ -69,7 +66,7 @@
     font-size: 16px;
 }
 .section-animals .animal-list {
-    background-color: #FFF8E1;
+    background-color: rgba(255, 248, 225, 0.5);
     border-radius: 10px;
     padding: 35px;
 }
@@ -93,20 +90,7 @@
 .section-animals__item img:hover {
     max-width: 100%;
 }
-.time-sort {
-    background-color: #FFF8E1;
-    position: fixed;
-    bottom: 5px;
-    left: 10px;
-    z-index: 1;
-    padding: 5px 10px 0px;
-    border-radius: 20px;
-    border: solid;
-    border-color:  #08a589;
-}
-.time-sort:hover {
-   cursor: pointer;
-}
+
 .cant-animalito {
     background-color: red;
 }

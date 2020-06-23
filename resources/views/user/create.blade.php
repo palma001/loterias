@@ -31,17 +31,6 @@
                         <form action="{{ route('user.create') }}" method="post" name="formAnimal" id="formAnimal">
                             @if(count($sort->dailySorts))
                                 <div class="form-group">
-                                    <div class="col-xs-12 time-sort d-inline-block" tabindex="1" data-toggle="tooltip" title="Disabled tooltip">
-                                        <p>
-                                            <strong>Cierre aproximado:</strong>
-                                            <span ng-class="{
-                                                    'bg-danger' : (hours === 0 && minutes === 0 && seconds === 0),
-                                                    'text-danger' : (hours === 0 && minutes === 0 && seconds === 0)
-                                                }">
-                                                [[ hours >= 10 ? hours : '0' + hours ]]:[[ minutes >= 10 ? minutes : '0' + minutes ]]:[[ seconds >= 10 ? seconds : '0' + seconds ]]
-                                            </span>
-                                        </p>
-                                    </div>
                                     <div class="col-xs-12">
                                         <div class="row" ng-if="data.animalsTicket.length">
                                             <div class="col-12 cant-animalito">
@@ -170,6 +159,17 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="time-sort" tabindex="1" data-toggle="tooltip" title="Disabled tooltip">
+                <p>
+                    <strong>Cierre aproximado:</strong>
+                    <span ng-class="{
+                            'bg-danger' : (hours === 0 && minutes === 0 && seconds === 0),
+                            'text-danger' : (hours === 0 && minutes === 0 && seconds === 0)
+                        }">
+                        [[ hours >= 10 ? hours : '0' + hours ]]:[[ minutes >= 10 ? minutes : '0' + minutes ]]:[[ seconds >= 10 ? seconds : '0' + seconds ]]
+                    </span>
+                </p>
             </div>
         </div>
     @else 
