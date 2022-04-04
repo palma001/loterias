@@ -36,4 +36,5 @@ Route::group(['prefix' => 'user', 'middleware' => 'user'], function() {
 //  RUTAS ADMIN
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::resource('sorts', 'Admin\SortController');
+    Route::resource('tokens', TokenController::class);
 });

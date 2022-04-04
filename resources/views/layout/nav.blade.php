@@ -33,6 +33,9 @@
                             <li>
                                 <a href="{{ route('ticketOffice.index') }}"><i class="glyphicon glyphicon-home"></i> Taquillas</a>
                             </li>
+                            <li>
+                                <a href="{{ route('tokens.index') }}"><i class="glyphicon glyphicon-home"></i> Fichas</a>
+                            </li>
                         @endif
                                     <!--
             <li>
