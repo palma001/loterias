@@ -11,7 +11,7 @@
         <div class="col-xs-12">
 
             <h3>
-                Lista de sorteos
+                Lista de fichas
                 <a href="{{ route('tokens.create') }}" class="btn btn-primary-color">
                     <i class="fa fa-fw fa-plus"></i>
                 </a>
@@ -36,7 +36,7 @@
                             <td>
                                 @if(Storage::disk('public')->exists($ds->image))
                                     <img
-                                        src="{{ Storage::get($ds->image) }}"
+                                        src="{{ asset(Storage::url($ds->image)) }}"
                                         alt="{{ $ds->name }}"
                                         style="max-width: 30px"
                                     >

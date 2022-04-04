@@ -39,11 +39,7 @@ class TokenController extends Controller
      */
     public function store(Request $request)
     {
-        $path = $request->file('img')->storePubliclyAs(
-            "tokens/{$request->sort_id}",
-            $request->name,
-            'public'
-        );
+        $path = $request->file('img')->store("tokens/{$request->sort_id}");
         $token = new Animal();
         $token->sort_id = $request->sort_id;
         $token->name = $request->name;
@@ -51,7 +47,7 @@ class TokenController extends Controller
         $token->image = $path;
         $token->save();
         $this->sessionMessages('Ficha registrado');
-        return redirect()->route('token.index');
+        return redirect()->route('tokens.index');
     }
 
     /**

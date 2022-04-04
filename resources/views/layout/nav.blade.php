@@ -4,7 +4,7 @@
     <div class="navbar-header" style="width: 100%!important;">
         @if(Auth::check())
 
-            <a class="navbar-brand" href="{{ route('user.index') }}">Loteria de animalitos <small>({{ (new \DateTime('now'))->format('d-m-Y h:i a') }})</small> </a>
+            <a class="navbar-brand" href="{{ route('user.index') }}">Sistema de apuesta <small>({{ (new \DateTime('now'))->format('d-m-Y h:i a') }})</small> </a>
 
             <!-- Top Menu Items -->
 
@@ -34,7 +34,7 @@
                                 <a href="{{ route('ticketOffice.index') }}"><i class="glyphicon glyphicon-home"></i> Taquillas</a>
                             </li>
                             <li>
-                                <a href="{{ route('tokens.index') }}"><i class="glyphicon glyphicon-home"></i> Fichas</a>
+                                <a href="{{ route('tokens.index') }}"><i class="glyphicon glyphicon-certificate"></i> Fichas</a>
                             </li>
                         @endif
                                     <!--
