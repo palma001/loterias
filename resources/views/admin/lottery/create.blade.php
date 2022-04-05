@@ -15,22 +15,10 @@
         </div>
     </div>
 
-    <form action="{{ route('tokens.store') }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('lotteries.store') }}" method="post" enctype="multipart/form-data">
 
         <div class="row">
             {{ csrf_field() }}
-
-            <div class="col-sm-3">
-                <div class="form-group">
-                    <label for="sort_id">Sorteo</label>
-                    <select name="sort_id" id="sort_id" class="form-control">
-                        @foreach($sorts as $sort)
-                            <option value="{{ $sort->id }}">{{ $sort->description }}</option>
-                        @endforeach
-                    </select>
-                </div>
-            </div>
-
             <div class="col-sm-3">
                 <div class="form-group">
                     <label for="name">Nombre</label>

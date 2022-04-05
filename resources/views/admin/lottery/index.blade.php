@@ -7,12 +7,10 @@
 @section('content')
 
     <div class="row" ng-controller="SortController">
-
         <div class="col-xs-12">
-
             <h3>
                 Lista de fichas
-                <a href="{{ route('tokens.create') }}" class="btn btn-primary-color">
+                <a href="{{ route('lotteries.create') }}" class="btn btn-primary-color">
                     <i class="fa fa-fw fa-plus"></i>
                 </a>
             </h3>
@@ -33,7 +31,7 @@
                             <td>{{ $ds->daily_limit }}</td>
                             <td>{{ $ds->pay_per_100 }}</td>
                             <td>
-                                <a href="{{ route('tokens.edit', $ds->id) }}" class="btn btn-warning">
+                                <a href="{{ route('lotteries.edit', $ds->id) }}" class="btn btn-warning">
                                     <i class="fa fa-fw fa-edit"></i>
                                 </a>
                             </td>

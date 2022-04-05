@@ -28,7 +28,7 @@ class LotteryController extends Controller
      */
     public function create()
     {
-        return view('admin.lottery.edit');
+        return view('admin.lottery.create');
     }
 
     /**
@@ -66,7 +66,8 @@ class LotteryController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.lottery.edit');
+        $lottery = Sort::findOrFail($id);
+        return view('admin.lottery.edit', compact('lottery'));
     }
 
     /**
