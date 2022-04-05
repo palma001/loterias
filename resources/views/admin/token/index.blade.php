@@ -38,14 +38,14 @@
                                     <img
                                         src="{{ asset(Storage::url($ds->image)) }}"
                                         alt="{{ $ds->name }}"
-                                        style="max-width: 30px"
+                                        style="max-width: 40px"
                                     >
                                 @else
                                     {{ $ds->name }}
                                 @endif
                             </td>
                             <td>
-                                <a href="{{ route('sorts.edit', ['sort' => $ds->id]) }}" class="btn btn-warning">
+                                <a href="{{ route('tokens.edit', $ds->id) }}" class="btn btn-warning">
                                     <i class="fa fa-fw fa-edit"></i>
                                 </a>
                             </td>

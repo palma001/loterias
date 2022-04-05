@@ -59,7 +59,6 @@ class Ticket extends Model
     public function printSpooler() {
         return $this->hasMany('App\PrintSpooler', 'ticket_id');
     }
-
     /**
      * Retorna el monto jugado en este ticket
      *
@@ -163,7 +162,6 @@ class Ticket extends Model
 
         return $total;
     }
-
     /**
      * Indica si ya cerraron todos los sorteos
      * asociados a este ticket

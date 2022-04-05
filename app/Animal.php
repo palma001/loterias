@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Animal extends Model
 {
@@ -12,6 +13,12 @@ class Animal extends Model
         'name', 'number', 'sort_id'
     ];
 
+    protected $appends = ['path'];
+
+    public function getPathAttribute()
+    {
+        return Storage::url($this->image);
+    }
     /**
      * Retorna todos los tickets que han jugado por este animal
      *

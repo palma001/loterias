@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Animal;
 use App\Sort;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\Controller;
+use DB;
 
-class TokenController extends Controller
+class LotteryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,9 @@ class TokenController extends Controller
      */
     public function index()
     {
-        $tokens = Animal::orderBy('id', 'desc')->get();
-        return view('admin.token.index')->with(['tokens' => $tokens]);
+        $sorts = Sort::orderBy('id', 'desc')->get();
+
+        return view('admin.lottery.index')->with(['sorts' => $sorts]);
     }
 
     /**
@@ -27,8 +28,7 @@ class TokenController extends Controller
      */
     public function create()
     {
-        $sorts = Sort::all();
-        return view('admin.token.create')->with(['sorts' => $sorts]);
+        return view('admin.lottery.edit');
     }
 
     /**
@@ -39,15 +39,12 @@ class TokenController extends Controller
      */
     public function store(Request $request)
     {
-        $path = $request->file('img')->store("tokens/{$request->sort_id}");
-        $token = new Animal();
-        $token->sort_id = $request->sort_id;
-        $token->name = $request->name;
-        $token->number = $request->number;
-        $token->image = $path;
-        $token->save();
-        $this->sessionMessages('Ficha registrado');
-        return redirect()->route('tokens.index');
+        $sort = new Sort($request->all());
+        $sort->save();
+
+        $this->sessionMessages('Loteria registrado');
+
+        return redirect()->route('lotteries.index');
     }
 
     /**
@@ -69,11 +66,7 @@ class TokenController extends Controller
      */
     public function edit($id)
     {
-        $animal = Animal::findOrFail($id);
-        return view('admin.token.edit')->with([
-            'token' => $animal,
-            'sorts' => Sort::all()
-        ]);
+        return view('admin.lottery.edit');
     }
 
     /**
@@ -85,17 +78,12 @@ class TokenController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $animal = Animal::findOrFail($id);
-        if ($request->file('img')) {
-            $path = $request->file('img')->store("tokens/{$request->sort_id}");
-            $animal->image = $path;
-        }
-        $animal->sort_id = $request->sort_id;
-        $animal->name = $request->name;
-        $animal->number = $request->number;
-        $animal->update();
-        $this->sessionMessages('Ficha actualizada');
-        return redirect()->route('tokens.index');
+        $sort = Sort::findOrFail($id);
+        $sort->update($request->all());
+
+        $this->sessionMessages('Loteria actualizado');
+
+        return redirect()->route('loteries.index', ['sort' => $id]);
     }
 
     /**

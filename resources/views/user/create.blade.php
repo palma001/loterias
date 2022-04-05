@@ -14,14 +14,14 @@
                     <div class="col-sm-6 col-md-4 section-animals__item" ng-repeat="animal in data.animalsList">
                         <p class="text-center" ng-hide="hasTicket(animal.id);">
                             <a href="" ng-click="addToTicket(animal);">
-                                <img ng-src="[[ data.imgUrl + '/' + clearName(animal.name) + '.jpg' ]]" alt="[[ animal.name ]]">
+                                <img src="[[ animal.path ]]" alt="[[ animal.name ]]">
                                 <strong>[[ animal.number ]]</strong>
                                 [[ animal.name ]]
                             </a>
                         </p>
 
                         <p class="text-center selected" ng-show="hasTicket(animal.id);">
-                            <img ng-src="[[ data.imgUrl + '/' + clearName(animal.name) + '.jpg' ]]" alt="[[ animal.name ]]">
+                            <img ng-src="[[ animal.path ]]" alt="[[ animal.name ]]">
                             <strong>[[ animal.number ]]</strong>
                             [[ animal.name ]]
                         </p>
@@ -37,28 +37,28 @@
                         <tr>
                             <td width="25%">
                                 <input
-                                        type="text"
-                                        class="form-control"
-                                        placeholder="Animalito"
-                                        id="newAnimalNumber"
-                                        ng-model="newAnimal.number"
-                                        ng-style="styleAnimalAdd"
-                                        ng-keydown="keyToGoAmount($event)"
-                                        >
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Animalito"
+                                    id="newAnimalNumber"
+                                    ng-model="newAnimal.number"
+                                    ng-style="styleAnimalAdd"
+                                    ng-keydown="keyToGoAmount($event)"
+                                >
                             </td>
                             <td width="35%">
                                 [[ printIfHasList() ]]
                             </td>
                             <td width="40%">
                                 <input
-                                        type="number"
-                                        class="form-control"
-                                        placeholder="Valor"
-                                        id="newAnimalAmount"
-                                        ng-model="newAnimal.amount"
-                                        ng-keydown="keyToAddNewAnimal($event)"
-                                        ng-disabled="! hasList(newAnimal.number)"
-                                        >
+                                    type="number"
+                                    class="form-control"
+                                    placeholder="Valor"
+                                    id="newAnimalAmount"
+                                    ng-model="newAnimal.amount"
+                                    ng-keydown="keyToAddNewAnimal($event)"
+                                    ng-disabled="! hasList(newAnimal.number)"
+                                >
                             </td>
                             <td>
                                 <button type="button" class="btn btn-success" ng-click="addNewAnimal()">
@@ -77,7 +77,6 @@
                     </table>
 
                     <form action="{{ route('user.create') }}" method="post" name="formAnimal" id="formAnimal">
-
                         @foreach($sorts as $sort)
                             @if(count($sort))
                                 <div class="form-group">
@@ -101,20 +100,20 @@
                                     @foreach($sort as $dailySort)
                                         <div class="col-sm-4">
                                             <input
-                                                    type="checkbox"
-                                                    name="sorts[{{ $dailySort->id }}]"
-                                                    ng-model="data.sorts[{{ $dailySort->id }}]"
-                                                    data-sort-id="{{ $dailySort->id }}"
-                                                    @if($dailySort->id === $sort[0]->id)
-                                                        ng-init="data.sorts[{{ $dailySort->id }}]=true"
-                                                        id="nextSortCheck"
-                                                    @else
-                                                        ng-init="data.sorts[{{ $dailySort->id }}]=false"
-                                                    @endif
-                                                    ng-change="getTotal()"
-                                                    onkeydown="return (event.keyCode !== 13)"
-                                                    onkeypress="return (event.keyCode !== 13)"
-                                                    onkeyup="return (event.keyCode !== 13)">
+                                                type="checkbox"
+                                                name="sorts[{{ $dailySort->id }}]"
+                                                ng-model="data.sorts[{{ $dailySort->id }}]"
+                                                data-sort-id="{{ $dailySort->id }}"
+                                                @if($dailySort->id === $sort[0]->id)
+                                                    ng-init="data.sorts[{{ $dailySort->id }}]=true"
+                                                    id="nextSortCheck"
+                                                @else
+                                                    ng-init="data.sorts[{{ $dailySort->id }}]=false"
+                                                @endif
+                                                ng-change="getTotal()"
+                                                onkeydown="return (event.keyCode !== 13)"
+                                                onkeypress="return (event.keyCode !== 13)"
+                                                onkeyup="return (event.keyCode !== 13)">
                                             {{ $dailySort->timeSortFormat() }}
                                         </div>
                                     @endforeach
@@ -147,7 +146,7 @@
                                     <td width="10%">
                                         <img
                                                 class="img-responsive"
-                                                ng-src="[[ data.imgUrl + '/' + clearName(animal.name) + '.jpg' ]]"
+                                                ng-src="[[ animal.path ]]"
                                                 alt="[[ animal.name ]]">
                                     </td>
                                     <td width="30%">[[ animal.number + ' - ' + animal.name ]]</td>
@@ -198,21 +197,27 @@
                         </div>
 
                         <div class="text-center">
-
+                            
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Id Pay"
+                                name="pay_id"
+                            >
+                            <br>
                             <button
-                                    type="button"
-                                    id="btnSaveTicket"
-                                    class="btn btn-lg btn-primary-color"
-                                    ng-if="data.animalsTicket.length && ! submitted"
-                                    ng-disabled="! hasSelectedSort() || hasLimitError() || submitted"
-                                    ng-click="saveTicket()">
-                                <i class="fa fa-save"></i> Guardar ticket (F2)
+                                type="button"
+                                id="btnSaveTicket"
+                                class="btn btn-lg btn-primary-color"
+                                ng-if="data.animalsTicket.length && ! submitted"
+                                ng-click="saveTicket()">
+                                <i class="fa fa-save"></i> Guardar ticket
                             </button>
 
                             <img
-                                    ng-if="submitted"
-                                    src="{{ asset('img/loading.gif') }}"
-                                    alt="Cargando..">
+                                ng-if="submitted"
+                                src="{{ asset('img/loading.gif') }}"
+                                alt="Cargando..">
                         </div>
                     </form>
                 </div>
@@ -299,19 +304,9 @@
 
 @section('js')
     <script>
-        var imgUrl = 'img/';
         var seconds = {{ $seconds }}
-
-        @foreach($sorts as $sort)
-            @foreach($sort as $dailySort)
-                imgUrl = '{{ 'img/' . $dailySort->sort->folder }}';
-                @break(2)
-            @endforeach
-        @endforeach
-
         var data = {
-            animalsList : {!! json_encode($animals) !!},
-            imgUrl : imgUrl,
+            animalsList : {!! json_encode($animals) !!}
         };
 
         $('#newAnimalNumber').focus();

@@ -6,14 +6,16 @@
     "type": "project",
     "require": {
         "php": "^7.4|^8.0",
-        "barryvdh/laravel-dompdf": "^0.8.1",
+        "barryvdh/laravel-dompdf": "^1.0",
+        "dompdf/dompdf": "^1.2",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "^1.4.2",
-        "phpunit/phpunit": "^9.3.3"
+        "phpunit/phpunit": "^9.3.3",
+        "simplesoftwareio/simple-qrcode": "~2"
     },
     "autoload": {
         "classmap": [

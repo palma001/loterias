@@ -34,6 +34,9 @@
                                 <a href="{{ route('ticketOffice.index') }}"><i class="glyphicon glyphicon-home"></i> Taquillas</a>
                             </li>
                             <li>
+                                <a href="{{ route('lotteries.index') }}"><i class="glyphicon glyphicon-list-alt"></i> Loterias</a>
+                            </li>
+                            <li>
                                 <a href="{{ route('tokens.index') }}"><i class="glyphicon glyphicon-certificate"></i> Fichas</a>
                             </li>
                         @endif

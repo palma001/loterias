@@ -97,6 +97,7 @@ class IndexController extends Controller
             $ticket->public_id = 'TICK00' . (Ticket::all()->count() + 1);
             $ticket->user_id = Auth::user()->id;
             $ticket->status = Ticket::STATUS_ACTIVE;
+            $ticket->pay_id = $request->pay_id;
             $ticket->pay_per_100 = $dailySort->sort->pay_per_100;
             $ticket->save();
             $ticket->dailySorts()->sync(array_keys($request->sorts));
@@ -287,6 +288,25 @@ class IndexController extends Controller
         $this->sessionMessages('Ticket a cola de impresion');
 
         return redirect()->route('user.show', ['ticket' => $ticketId]);
+    }
+    /**
+     * Pdf un ticket
+     *
+     * @param $ticketId
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function pdfTicket($ticketId)
+    {
+        $ticket = Ticket::find($ticketId);
+
+        $printSpooler = new PrintSpooler();
+        $printSpooler->ticket_id = $ticket->id;
+        $printSpooler->status = PrintSpooler::STATUS_PENDING;
+        $printSpooler->save();
+
+        $this->sessionMessages('Ticket a cola de impresion');
+        $pdf = \PDF::loadView('text.pdfticket', compact('ticket'));
+        return $pdf->stream();
     }
 
     /**
