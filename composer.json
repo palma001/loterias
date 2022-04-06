@@ -9,13 +9,13 @@
         "barryvdh/laravel-dompdf": "^1.0",
         "dompdf/dompdf": "^1.2",
         "laravel/framework": "^8.12",
+        "simplesoftwareio/simple-qrcode": "~2",
         "laravel/tinker": "^2.5"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "^1.4.2",
-        "phpunit/phpunit": "^9.3.3",
-        "simplesoftwareio/simple-qrcode": "~2"
+        "phpunit/phpunit": "^9.3.3"
     },
     "autoload": {
         "classmap": [
@@ -43,8 +43,7 @@
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
-            "php artisan optimize",
-            "apt-get install php-gd"
+            "php artisan optimize"
         ]
     },
     "config": {
