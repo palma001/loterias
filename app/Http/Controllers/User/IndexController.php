@@ -54,7 +54,10 @@ class IndexController extends Controller
             }
         }
 
-        $animals = $sorts[0]->animals;
+        $animals = $sorts[0]->animals()->whereDoesntHave('tickets', function ($query) {
+            $query->where('tickets.status', Ticket::STATUS_ACTIVE);
+        })->get();
+        // dd($animals->toSql());
         $animals = $this->getDailyLimit($animals);
 
         return view('user.create')->with([
@@ -264,7 +267,6 @@ class IndexController extends Controller
                     }
                 }
             }
-
         }
 
         return $animals;

@@ -133,7 +133,7 @@
                             <div class="col-xs-6">
                                 <p>
                                     <strong>Total:</strong>
-                                    [[ total ]] Bsf
+                                    [[ total ]] USD
                                 </p>
                             </div>
                         </div>
@@ -145,9 +145,9 @@
                                 <tr ng-repeat="animal in data.animalsTicket" ng-class="{'bg-danger' : animal.limitError}">
                                     <td width="10%">
                                         <img
-                                                class="img-responsive"
-                                                ng-src="[[ animal.path ]]"
-                                                alt="[[ animal.name ]]">
+                                            class="img-responsive"
+                                            ng-src="[[ animal.path ]]"
+                                            alt="[[ animal.name ]]">
                                     </td>
                                     <td width="30%">[[ animal.number + ' - ' + animal.name ]]</td>
                                     <td width="20%">
@@ -158,36 +158,33 @@
                                     </td>
                                     <td width="40%">
                                         <input
-                                                type="hidden"
-                                                class="form-control"
-                                                placeholder="Valor"
-                                                ng-value="animal.id"
-                                                name="animals[]"
-                                                required
-                                                >
+                                            type="hidden"
+                                            class="form-control"
+                                            placeholder="Valor"
+                                            ng-value="animal.id"
+                                            name="animals[]"
+                                            required
+                                        >
                                         <input
-                                                type="number"
-                                                class="form-control"
-                                                placeholder="Valor"
-                                                ng-model="animal.amount"
-                                                name="amounts[]"
-                                                ng-change="getTotal()"
-                                                required
-                                                onkeydown="return (event.keyCode !== 13)"
-                                                onkeypress="return (event.keyCode !== 13)"
-                                                onkeyup="return (event.keyCode !== 13)"
-                                                >
-                                    <span
-                                            class="error"
-                                            ng-show=""
-                                            >
-                                        Este valor es requerido
-                                    </span>
+                                            type="number"
+                                            class="form-control"
+                                            placeholder="Valor"
+                                            ng-model="animal.amount"
+                                            name="amounts[]"
+                                            ng-change="getTotal()"
+                                            required
+                                            onkeydown="return (event.keyCode !== 13)"
+                                            onkeypress="return (event.keyCode !== 13)"
+                                            onkeyup="return (event.keyCode !== 13)"
+                                        >
+                                        <span class="error" ng-show="">
+                                            Este valor es requerido
+                                        </span>
                                     </td>
                                     <td>
                                         <button type="button"
-                                                class="btn btn-danger"
-                                                ng-click="removeFromTicket($index)">
+                                            class="btn btn-danger"
+                                            ng-click="removeFromTicket($index)">
                                             <i class="fa fa-remove"></i>
                                         </button>
                                     </td>

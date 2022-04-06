@@ -8,47 +8,42 @@
 
     <div class="row">
         <div class="col-xs-12">
-            <h3>Editar Ficha</h3>
+            <h3>Modificar loteria</h3>
             <hr>
         </div>
     </div>
-
-    <form action="{{ route('tokens.update', $token->id) }}" method="post" enctype="multipart/form-data">
-
+    <form action="{{ route('lotteries.update', $lottery->id) }}" method="post" enctype="multipart/form-data">
         <div class="row">
             {{ csrf_field() }}
             {{ method_field('PUT') }}
             <div class="col-sm-3">
                 <div class="form-group">
-                    <label for="sort_id">Sorteo</label>
-                    <select name="sort_id" id="sort_id" class="form-control">
-                        @foreach($sorts as $sort)
-                            @if($sort->id === $token->sort_id)
-                                <option value="{{ $sort->id }}" selected>{{ $sort->description }}</option>
-                            @else
-                                <option value="{{ $sort->id }}">{{ $sort->description }}</option>
-                            @endif
-                        @endforeach
-                    </select>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="form-group">
-                    <label for="name">Nombre</label>
-                    <input type="text" class="form-control" name="name" id="name" placeholder="Nombre" value="{{ $token->name }}" required>
+                    <label for="name">Descripción</label>
+                    <input type="text" value="{{ $lottery->description }}" class="form-control" name="description" id="description" placeholder="Descripción" required>
                 </div>
             </div>
             <div class="col-sm-3">
                 <div class="form-group">
-                    <label for="number">Número</label>
-                    <input type="number" class="form-control" name="number" id="number" placeholder="Número" value="{{ $token->number }}" required>
+                    <label for="number">Pago por 100</label>
+                    <input type="number" value="{{ $lottery->pay_per_100 }}" class="form-control" name="pay_per_100" id="pay_per_100" placeholder="Pago por 100" required>
                 </div>
             </div>
             <div class="col-sm-3">
                 <div class="form-group">
-                    <label for="img">Imagen</label>
-                    <input type="file" class="form-control" name="img" id="img" placeholder="Imagen">
+                    <label for="number">Carpeta de imagenes</label>
+                    <input type="text" value="{{ $lottery->folder }}" class="form-control" name="folder" id="folder" placeholder="Carpeta de imagenes" required>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="img">Limite diario</label>
+                    <input type="number" value="{{ $lottery->daily_limit }}" class="form-control" name="daily_limit" id="daily_limit" placeholder="Limite diario" required>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="img">Limite semanal</label>
+                    <input type="number" value="{{ $lottery->week_limit }}" class="form-control" name="week_limit" id="week_limit" placeholder="Limite semanal" required>
                 </div>
             </div>
         </div>
@@ -60,7 +55,5 @@
                 </button>
             </div>
         </div>
-
     </form>
-
 @endsection

@@ -21,20 +21,32 @@
             {{ csrf_field() }}
             <div class="col-sm-3">
                 <div class="form-group">
-                    <label for="name">Nombre</label>
-                    <input type="text" class="form-control" name="name" id="name" placeholder="Nombre" required>
+                    <label for="name">Descripción</label>
+                    <input type="text" class="form-control" name="description" id="description" placeholder="Descripción" required>
                 </div>
             </div>
             <div class="col-sm-3">
                 <div class="form-group">
-                    <label for="number">Número</label>
-                    <input type="number" class="form-control" name="number" id="number" placeholder="Número" required>
+                    <label for="number">Pago por 100</label>
+                    <input type="number" class="form-control" name="pay_per_100" id="pay_per_100" placeholder="Pago por 100" required>
                 </div>
             </div>
             <div class="col-sm-3">
                 <div class="form-group">
-                    <label for="img">Imagen</label>
-                    <input type="file" class="form-control" name="img" id="img" placeholder="Imagen" required>
+                    <label for="number">Carpeta de imagenes</label>
+                    <input type="text" class="form-control" name="folder" id="folder" placeholder="Carpeta de imagenes" required>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="img">Limite diario</label>
+                    <input type="number" class="form-control" name="daily_limit" id="daily_limit" placeholder="Limite diario" required>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="img">Limite semanal</label>
+                    <input type="number" class="form-control" name="week_limit" id="week_limit" placeholder="Limite semanal" required>
                 </div>
             </div>
         </div>

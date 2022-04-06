@@ -7,7 +7,7 @@
         <table style="width: 100%">
             <tr>
                 <td class="text-left">
-                    <h4>Btcplays</h4>
+                    <img src="{{ public_path('img/photo_2022-04-05_18-22-58.jpg') }}" alt="" width="100" height="100">
                     <br>{{ $ticket->public_id }}<br>
                     Telegram: @Atc_Btcplays <br>
                     btcplays2018@gmail.com <br>

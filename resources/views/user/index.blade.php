@@ -106,6 +106,12 @@
                                             <i class="glyphicon glyphicon-check"></i> {{ $ticket->status }}
                                         </strong>
                                     </span>
+                                @elseif($ticket->status === \App\Ticket::STATUS_LOSE)
+                                    <span class="text-info bg-info">
+                                        <strong>
+                                            <span class="text-danger bg-danger">{{ $ticket->status }}</span>
+                                        </strong>
+                                    </span>
                                 @elseif($ticket->status === \App\Ticket::STATUS_NULL)
                                     <span class="text-danger bg-danger">{{ $ticket->status }}</span>
                                 @endif

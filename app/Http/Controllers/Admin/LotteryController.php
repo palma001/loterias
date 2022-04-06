@@ -84,7 +84,7 @@ class LotteryController extends Controller
 
         $this->sessionMessages('Loteria actualizado');
 
-        return redirect()->route('loteries.index', ['sort' => $id]);
+        return redirect()->route('lotteries.index', ['sort' => $id]);
     }
 
     /**
