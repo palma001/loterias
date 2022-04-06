@@ -16,7 +16,7 @@
                     <div class="input-group">
                         <input type="text" id="inputSearch" class="form-control" ng-model="search" placeholder="Buscar por ticket ID" onkeydown="search(event)">
                     <span class="input-group-btn">
-                        <a href="{{ route('user.list', ['status' => Request::has('status') ? Request::get('status') : null]) }}&search=[[ search ]]" id="btnSearch" class="btn btn-default">
+                        <a href="{{ route('user.list', ['status' => Request::has('status') ? Request::get('status') : null]) }}?search=[[ search ]]" id="btnSearch" class="btn btn-default">
                             <i class="fa fa-fw fa-search"></i>
                         </a>
                     </span>

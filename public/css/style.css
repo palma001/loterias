@@ -6,8 +6,9 @@
     padding-left: 0;
 }
 .navbar-inverse {
-    background-color: #08a589;
+    background-color: #337ab7;
     border-color: #08a589;
+    color: white;
 }
 .navbar-inverse .navbar-brand {
     color: #fff;
