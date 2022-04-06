@@ -99,6 +99,9 @@
                         <a href="{{ route('tokens.index') }}"><i class="glyphicon glyphicon-certificate"></i> Fichas</a>
                     </li>
                 @endif
+                <li>
+                    <a href="{{ route('index.logout') }}"><i class="fa fa-fw fa-power-off"></i> Salir</a>
+                </li>
             </ul>
         @endif
     </div>
