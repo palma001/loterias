@@ -43,7 +43,8 @@
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
-            "php artisan optimize"
+            "php artisan optimize",
+            "apt-get install php-gd"
         ]
     },
     "config": {
