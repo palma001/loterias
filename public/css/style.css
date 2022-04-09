@@ -108,7 +108,8 @@
     margin-bottom: 20px;
 }
 .section-animals__item img {
-    max-width: 50px;
+    width: 140px;
+    height: 110px;
 }
 .section-animals__item .selected {
     color: #08a589;
