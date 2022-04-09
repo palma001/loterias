@@ -71,7 +71,7 @@
 <nav class="navbar navbar-default navbar-fixed-top navbar-end">
     <div class="navbar-header" style="width: 100%!important;">
         @if(Auth::check())
-            <a class="navbar-brand" href="{{ route('user.index') }}">Sistema de apuesta <small>({{ (new \DateTime('now'))->format('d-m-Y h:i a') }})</small> </a>
+            <a class="navbar-brand" href="{{ route('user.index') }}">Btcplays <small>({{ (new \DateTime('now'))->format('d-m-Y h:i a') }})</small> </a>
             <ul class="nav navbar-nav" style="float: right;">
                 <li>
                     <a href="{{ route('user.index') }}"><i class="fa fa-fw fa-home"></i> Vender ticket</a>
