@@ -80,14 +80,16 @@ class ResultController extends Controller
             // Seteo los tickets ganadores
             if ($ticket->ticketIsGain()) {
                 $ticket->status = Ticket::STATUS_GAIN;
-                $ticket->save();
+            } else {
+                $ticket->status = Ticket::STATUS_LOSE;
             }
+            $ticket->save();
         }
 
         DB::commit();
 
         $this->sessionMessages('Resultado guardado');
 
-        return redirect($this->getRedirectUrl('results.index'));
+        return redirect()->route('results.index');
     }
 }

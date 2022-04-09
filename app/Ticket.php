@@ -10,6 +10,7 @@ class Ticket extends Model
     const STATUS_PAY = 'Pago';
     const STATUS_NULL = 'Anulado';
     const STATUS_GAIN = 'Ganador';
+    const STATUS_LOSE = 'Perdio';
 
     protected $table = 'tickets';
 
@@ -59,7 +60,6 @@ class Ticket extends Model
     public function printSpooler() {
         return $this->hasMany('App\PrintSpooler', 'ticket_id');
     }
-
     /**
      * Retorna el monto jugado en este ticket
      *
@@ -163,7 +163,6 @@ class Ticket extends Model
 
         return $total;
     }
-
     /**
      * Indica si ya cerraron todos los sorteos
      * asociados a este ticket

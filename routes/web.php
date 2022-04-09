@@ -26,6 +26,7 @@ Route::group(['prefix' => 'user', 'middleware' => 'user'], function() {
     Route::put('/ticket/{ticket}/payTicket', ['uses' => 'User\IndexController@payTicket', 'as' => 'user.payTicket']);
     Route::put('/ticket/{ticket}/nullTicket', ['uses' => 'User\IndexController@nullTicket', 'as' => 'user.nullTicket']);
     Route::post('/ticket/{ticket}/printTicket', ['uses' => 'User\IndexController@printTicket', 'as' => 'user.printTicket']);
+    Route::post('/ticket/{ticket}/pdfTicket', ['uses' => 'User\IndexController@pdfTicket', 'as' => 'user.pdfTicket']);
     Route::get('/results', ['uses' => 'User\ResultController@index', 'as' => 'results.index']);
     Route::resource('/ticketOffice', 'Admin\TicketOfficeController');
     Route::get('report', ['uses' => 'User\ReportController@index', 'as' => 'user.report']);
@@ -37,4 +38,5 @@ Route::group(['prefix' => 'user', 'middleware' => 'user'], function() {
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::resource('sorts', 'Admin\SortController');
     Route::resource('tokens', TokenController::class);
+    Route::resource('lotteries', 'Admin\\'.LotteryController::class);
 });

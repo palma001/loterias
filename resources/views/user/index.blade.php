@@ -16,7 +16,7 @@
                     <div class="input-group">
                         <input type="text" id="inputSearch" class="form-control" ng-model="search" placeholder="Buscar por ticket ID" onkeydown="search(event)">
                     <span class="input-group-btn">
-                        <a href="{{ route('user.list', ['status' => Request::has('status') ? Request::get('status') : null]) }}&search=[[ search ]]" id="btnSearch" class="btn btn-default">
+                        <a href="{{ route('user.list', ['status' => Request::has('status') ? Request::get('status') : null]) }}?search=[[ search ]]" id="btnSearch" class="btn btn-default">
                             <i class="fa fa-fw fa-search"></i>
                         </a>
                     </span>
@@ -104,6 +104,12 @@
                                     <span class="text-info bg-info">
                                         <strong>
                                             <i class="glyphicon glyphicon-check"></i> {{ $ticket->status }}
+                                        </strong>
+                                    </span>
+                                @elseif($ticket->status === \App\Ticket::STATUS_LOSE)
+                                    <span class="text-info bg-info">
+                                        <strong>
+                                            <span class="text-danger bg-danger">{{ $ticket->status }}</span>
                                         </strong>
                                     </span>
                                 @elseif($ticket->status === \App\Ticket::STATUS_NULL)

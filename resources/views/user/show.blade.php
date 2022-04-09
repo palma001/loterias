@@ -80,10 +80,10 @@
             @endif
 
                 <form
-                        action="{{ route('user.printTicket', ['ticket' => $ticket->id]) }}"
-                        method="post"
-                        style="display: inline-block;"
-                        id="printForm">
+                    action="{{ route('user.pdfTicket', ['ticket' => $ticket->id]) }}"
+                    method="post"
+                    style="display: inline-block;"
+                    id="printForm">
                     {{ csrf_field() }}
 
                     <button type="button" class="btn btn-primary" onclick="printTicket();">
@@ -100,7 +100,7 @@
             <div class="col-xs-6 col-sm-3">
                 <p>
                     <img
-                            src="{{ asset('img/' . $ticket->dailySorts[0]->sort->folder. '/' . $animal->getClearName() . '.jpg') }}"
+                            src="{{ $animal->path }}"
                             alt="{{ $animal->name }}"
                             style="max-width: 50px">
                     {{ $animal->name }}

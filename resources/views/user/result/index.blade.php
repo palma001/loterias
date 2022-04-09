@@ -50,7 +50,7 @@
                             <td>
                                 @if($animal = $dailySort->getAnimalGainToDate($date))
                                     <img
-                                            src="{{ asset('img/' . $dailySort->sort->folder . '/' . $animal->getClearName() . '.jpg') }}"
+                                            src="{{ $animal->path }}"
                                             alt="{{ $animal->name }}"
                                             style="max-width: 30px">
                                     {{ $animal->name }}
@@ -110,7 +110,7 @@
                                             ng-click="selectedAnimal = {{ $animal->id }}">
                                         <p>
                                             <img
-                                                    src="{{ asset('img/' . $dailySort->sort->folder . '/' . $animal->getClearName() . '.jpg') }}"
+                                                    src="{{ $animal->path }}"
                                                     alt="{{ $animal->name }}"
                                                     style="max-width: 38px">
                                             {{ $animal->name }}
