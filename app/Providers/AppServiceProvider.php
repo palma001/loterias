@@ -13,7 +13,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // if (env('APP_ENV') !== 'local') {
+        // \Log::info(env('APP_ENV', 'production'));
+        // if (env('APP_ENV', 'production') !== 'local') {
         //     $this->app['request']->server->set('HTTPS', true);
         // }
     }

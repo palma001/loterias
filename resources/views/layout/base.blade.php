@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     @yield('meta')
-    <title>Loteria de animales</title>
+    <title>Btcplays</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
