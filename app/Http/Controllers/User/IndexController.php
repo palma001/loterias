@@ -54,9 +54,10 @@ class IndexController extends Controller
             }
         }
 
-        $animals = $sorts[0]->animals()->whereDoesntHave('tickets', function ($query) {
-            $query->where('tickets.status', Ticket::STATUS_ACTIVE);
-        })->get();
+        $animals = $sorts[0]->animals;
+        // ->whereDoesntHave('tickets', function ($query) {
+        //     $query->where('tickets.status', Ticket::STATUS_ACTIVE);
+        // })->get();
         // dd($animals->toSql());
         $animals = $this->getDailyLimit($animals);
 
@@ -113,6 +114,8 @@ class IndexController extends Controller
                 }
             }
 
+            $this->pdfTicket($ticket->id);
+
             $printSpooler = new PrintSpooler();
             $printSpooler->ticket_id = $ticket->id;
             $printSpooler->status = PrintSpooler::STATUS_PENDING;
@@ -121,7 +124,7 @@ class IndexController extends Controller
         DB::commit();
 
         $this->sessionMessages('Ticket registrado');
-
+        $request->session()->flash('ticket', $ticket);
         return redirect()->route('user.index');
     }
 
@@ -308,7 +311,7 @@ class IndexController extends Controller
 
         $this->sessionMessages('Ticket a cola de impresion');
         $pdf = \PDF::loadView('text.pdfticket', compact('ticket'));
-        return $pdf->stream();
+        return $pdf->download("{$ticket->public_id}.pdf");
     }
 
     /**

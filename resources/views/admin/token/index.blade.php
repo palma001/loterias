@@ -34,15 +34,11 @@
                             <td>{{ $ds->name }}</td>
                             <td>{{ $ds->number }}</td>
                             <td>
-                                @if(Storage::disk('public')->exists($ds->image))
-                                    <img
-                                        src="{{ asset(Storage::url($ds->image)) }}"
-                                        alt="{{ $ds->name }}"
-                                        style="max-width: 40px"
-                                    >
-                                @else
-                                    {{ $ds->name }}
-                                @endif
+                                <img
+                                    src="{{ $ds->path }}"
+                                    alt="{{ $ds->name }}"
+                                    style="max-width: 40px"
+                                >
                             </td>
                             <td>
                                 <a href="{{ route('tokens.edit', $ds->id) }}" class="btn btn-warning">

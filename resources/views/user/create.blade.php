@@ -5,9 +5,11 @@
 @endsection
 
 @section('content')
+    @if(isset($ticket))
+        {{ $ticket }}
+    @endif
     @if(count($sorts))
         <div class="row section-animals" ng-controller="AnimalController">
-
             <div class="col-xs-6 col-sm-7">
                 <div class="row animal-list">
                     <!-- Lista de animalitos -->
@@ -28,9 +30,7 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-xs-6 col-sm-5">
-
                 <div class="">
                     <!-- Agregar por numero -->
                     <table class="table">
@@ -220,7 +220,6 @@
                 </div>
 
             </div>
-
             <!-- Modal ticket repeat -->
             <div id="repeatModal" class="modal fade" role="dialog">
                 <div class="modal-dialog">

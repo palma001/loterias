@@ -49,7 +49,21 @@
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 
                             <ul>
-                                <li>{{ Session::get('alert-message') }}</li>
+                                <li>
+                                    {{ Session::get('alert-message') }}
+                                    @if(Session::has('ticket'))
+                                        <form
+                                            action="{{ route('user.pdfTicket', ['ticket' => Session::get('ticket')->id]) }}"
+                                            method="post"
+                                        >
+                                            {{ csrf_field() }}
+                        
+                                            <button type="submit" class="btn btn-primary" onclick="printTicket();">
+                                                <i class="fa fa-fw fa-print"></i> Imprimir ticket
+                                            </button>
+                                        </form>
+                                    @endif
+                                </li>
                             </ul>
 
                         </div>

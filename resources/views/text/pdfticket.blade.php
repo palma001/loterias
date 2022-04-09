@@ -58,7 +58,7 @@
                 <tr class="text-center">
                     <td colspan="5">
                         El ticket solo se cancela al ID de binance
-                        Pay asociado al ticket em muestro sistema
+                        Pay asociado al ticket en muestro sistema
                     </td>
                 </tr>
             </tfoot>
