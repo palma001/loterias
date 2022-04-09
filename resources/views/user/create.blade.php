@@ -23,7 +23,7 @@
                         </p>
 
                         <p class="text-center selected" ng-show="hasTicket(animal.id);">
-                            <img ng-src="[[ animal.path ]]" alt="[[ animal.name ]]" width="100" height="100">
+                            <img ng-src="[[ animal.path ]]" alt="[[ animal.name ]]" style="width:100; height:100;">
                             <strong>[[ animal.number ]]</strong>
                             [[ animal.name ]]
                         </p>
