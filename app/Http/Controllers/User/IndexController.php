@@ -310,8 +310,10 @@ class IndexController extends Controller
         $printSpooler->save();
 
         $this->sessionMessages('Ticket a cola de impresion');
-        $pdf = \PDF::loadView('text.pdfticket', compact('ticket'));
-        return $pdf->download("{$ticket->public_id}.pdf");
+        $pdf = \PDF::loadView('text.pdfticket', compact('ticket'))
+            ->setPaper('a6', 'portrait');
+            // "{$ticket->public_id}.pdf"
+        return $pdf->stream();
     }
 
     /**

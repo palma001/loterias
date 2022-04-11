@@ -2,21 +2,29 @@
     <head>
         <title>{{ $ticket->public_id }}</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            .aqua-mark {
+                position: fixed;
+                opacity: 0.3;
+                bottom: 1px;
+                width: 100%;
+            }
+        </style>
     </head>
     <body>
+        <img class="aqua-mark" src="{{ public_path('img/logo.jpg') }}" alt="" width="100" height="100">
         <table style="width: 100%">
             <tr>
-                <td class="text-left">
-                    <img src="{{ public_path('img/photo_2022-04-05_18-22-58.jpg') }}" alt="" width="100" height="100">
-                    <br>{{ $ticket->public_id }}<br>
+                <td style="font-size: 11px !important; width: 30%;">
+                    <img src="data:image/png;base64, {{ base64_encode(QrCode::format('png')->size(70)->generate($ticket->public_id)) }}">
+                    <span style="margin-left: 10px; font-weight: bold;">{{ $ticket->public_id }}</span>
+                </td>
+                <td class="text-left" style="font-size: 11px !important;">
                     Telegram: @Atc_Btcplays <br>
                     btcplays2018@gmail.com <br>
                     FECHA: {{ date_format($ticket->created_at, 'd-m-Y h:i a') }}<br>
                     Estado: {{  $ticket->status }} <br>
                     Datos a pagar: {{  $ticket->pay_id }}
-                </td>
-                <td class="text-right">
-                    <img src="data:image/png;base64, {{ base64_encode(QrCode::format('png')->size(100)->generate($ticket->public_id)) }}">
                 </td>
             </tr>
         </table>
@@ -58,7 +66,7 @@
                 <tr class="text-center">
                     <td colspan="5">
                         El ticket solo se cancela al ID de binance
-                        Pay asociado al ticket en muestro sistema
+                        Pay asociado al ticket en nuestro sistema
                     </td>
                 </tr>
             </tfoot>
