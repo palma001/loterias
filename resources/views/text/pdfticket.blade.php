@@ -16,8 +16,8 @@
         <table style="width: 100%">
             <tr>
                 <td style="font-size: 11px !important; width: 30%;">
-                    <img src="data:image/png;base64, {{ base64_encode(QrCode::format('png')->size(70)->generate($ticket->public_id)) }}">
-                    <span style="margin-left: 10px; font-weight: bold;">{{ $ticket->public_id }}</span>
+                    <img src="data:image/png;base64, {{ base64_encode(QrCode::format('png')->size(90)->generate($ticket->public_id)) }}">
+                    <span style="margin-left: 19px; font-weight: bold;">{{ $ticket->public_id }}</span>
                 </td>
                 <td class="text-left" style="font-size: 11px !important;">
                     Telegram: @Atc_Btcplays <br>
