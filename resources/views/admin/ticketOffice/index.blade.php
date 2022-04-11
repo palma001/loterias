@@ -21,7 +21,7 @@
                 <thead>
                     <tr>
                         <th width="45%">Usuario</th>
-                        <th width="40%">Taquilla</th>
+                        <th width="40%">Vendedor</th>
                         <th width="15%">Registrado</th>
                         <th></th>
                     </tr>

@@ -55,7 +55,7 @@
                     <tr>
                         <th width="15%">Ticket ID</th>
                         <th width="25%">Fecha de registro</th>
-                        <th width="25%">Taquilla</th>
+                        <th width="25%">Vendedor</th>
                         <th width="20%">
                             <ul class="filter">
                                 <li class="dropdown">

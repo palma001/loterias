@@ -10,7 +10,7 @@
 
         <div class="col-xs-12">
 
-            <h3>Registrar taquilla</h3>
+            <h3>Registrar vendedor</h3>
             <hr>
         </div>
     </div>

@@ -90,7 +90,7 @@
                         <a href="{{ route('sorts.index') }}"><i class="glyphicon glyphicon-calendar"></i> Sorteos</a>
                     </li>
                     <li>
-                        <a href="{{ route('ticketOffice.index') }}"><i class="glyphicon glyphicon-home"></i> Taquillas</a>
+                        <a href="{{ route('ticketOffice.index') }}"><i class="glyphicon glyphicon-home"></i> Vendedores</a>
                     </li>
                     <li>
                         <a href="{{ route('lotteries.index') }}"><i class="glyphicon glyphicon-list-alt"></i> Loterias</a>
