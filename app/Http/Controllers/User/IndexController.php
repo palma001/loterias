@@ -312,8 +312,8 @@ class IndexController extends Controller
         $this->sessionMessages('Ticket a cola de impresion');
         $pdf = \PDF::loadView('text.pdfticket', compact('ticket'))
             ->setPaper('a6', 'portrait');
-            // "{$ticket->public_id}.pdf"
-        return $pdf->stream();
+
+        return $pdf->download("{$ticket->public_id}.pdf");
     }
 
     /**
