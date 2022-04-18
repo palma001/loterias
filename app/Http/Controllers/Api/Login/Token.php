@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Login;
+namespace App\Http\Controllers\Api\Login;
 use Illuminate\Support\Facades\DB;
 
 class Token

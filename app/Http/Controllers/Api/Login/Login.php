@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Login;
+namespace App\Http\Controllers\Api\Login;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 
