@@ -27,4 +27,5 @@ Route::group([
 Route::name('api.')
     ->group(function ($router) {
         $router->resource('tokens', TokenController::class);
+        $router->get('seconds', 'OtherController@seconds');
     });

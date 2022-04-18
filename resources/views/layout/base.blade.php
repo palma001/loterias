@@ -108,13 +108,13 @@
 
 <!-- jQuery -->
 <script src="{{ asset('js/jquery.js') }}"></script>
-
 <!-- Bootstrap Core JavaScript -->
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('js/angular.min.js') }}"></script>
 <script src="{{ asset('js/module.js') }}"></script>
 <script src="{{ asset('js/AnimalController.js') }}"></script>
 <script src="{{ asset('js/SortController.js') }}"></script>
+
 @yield('js')
 
 </body>

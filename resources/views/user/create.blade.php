@@ -290,7 +290,6 @@
 
         </div>
     @else
-
         <div class="alert alert-danger">
             <strong>Atención: </strong> En estos momentos no hay sorteos abiertos
         </div>
@@ -299,21 +298,21 @@
 @endsection
 
 @section('js')
-    <script>
-        var seconds = {{ $seconds }}
-        var data = {
-            animalsList : {!! json_encode($animals) !!}
-        };
+<script >
+    var seconds = {{ $seconds }}
+    var data = {
+        animalsList : {!! json_encode($animals) !!}
+    };
 
-        $('#newAnimalNumber').focus();
+    $('#newAnimalNumber').focus();
 
-        $(window).on('keydown', function(event) {
-            if (event.keyCode === 113) {
-                // F2
-                $('#btnSaveTicket').click();
-            }
-        });
-    </script>
+    $(window).on('keydown', function(event) {
+        if (event.keyCode === 113) {
+            // F2
+            $('#btnSaveTicket').click();
+        }
+    });
+</script>
 @endsection
 
 
