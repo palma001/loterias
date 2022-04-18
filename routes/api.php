@@ -17,8 +17,14 @@ Route::get('{printCode}/printSpooler', ['uses' => 'ApiController@getPrintSpooler
 
 Route::group([
     'prefix' => 'authentication',
+    'middleware' => ['cors']
 ], function ($router) {
     // Routes
     $router->post('/login', 'Login\Login@authentication');
     $router->post('/refresh-token', 'Login\RefreshToken@refreshToken');
 });
+
+Route::name('api.')
+    ->group(function ($router) {
+        $router->resource('tokens', TokenController::class);
+    });

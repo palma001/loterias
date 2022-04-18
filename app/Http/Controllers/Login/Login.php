@@ -103,7 +103,6 @@ class Login extends BaseAuthResolver
         if (method_exists($model, 'findForPassport')) {
             return $model->findForPassport($username);
         }
-
         return $model->where('username', $username)->first();
     }
 }

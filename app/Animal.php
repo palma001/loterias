@@ -1,11 +1,9 @@
 <?php
 
 namespace App;
-
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 
-class Animal extends Model
+class Animal extends Base
 {
     protected $table = 'animals';
 
