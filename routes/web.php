@@ -38,5 +38,6 @@ Route::group(['prefix' => 'user', 'middleware' => 'user'], function() {
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::resource('sorts', 'Admin\SortController');
     Route::resource('tokens', TokenController::class);
+    Route::get('best-sellers', 'Admin\ReportController@bestSellers')->name('best-sellers');
     Route::resource('lotteries', 'Admin\\'.LotteryController::class);
 });

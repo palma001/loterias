@@ -15,15 +15,16 @@
                 <div class="col-sm-8 col-md-6">
                     <div class="input-group">
                         <input type="text" id="inputSearch" class="form-control" ng-model="search" placeholder="Buscar por ticket ID" onkeydown="search(event)">
-                    <span class="input-group-btn">
-                        <a href="{{ route('user.list', ['status' => Request::has('status') ? Request::get('status') : null]) }}?search=[[ search ]]" id="btnSearch" class="btn btn-default">
-                            <i class="fa fa-fw fa-search"></i>
-                        </a>
-                    </span>
-
+                        <span class="input-group-btn">
+                            <a href="{{ route('user.list', ['status' => Request::has('status') ? Request::get('status') : null]) }}?search=[[ search ]]" id="btnSearch" class="btn btn-default">
+                                <i class="fa fa-fw fa-search"></i>
+                            </a>
+                        </span>
                     </div><!-- /input-group -->
                 </div><!-- /.col-lg-6 -->
-
+                <div class="col-2">
+                    <a href="{{ route('best-sellers') }}" class="btn btn-primary">Números mas  vendidos</a>
+                </div>
                 <div class="col-xs-12">
                     @if(Request::has('search'))
                         <br>
