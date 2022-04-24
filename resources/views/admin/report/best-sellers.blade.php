@@ -42,8 +42,8 @@
                 <tbody>
                     @foreach($bestSellers as $bestSeller)
                         <tr>
-                            <td>{{ $bestSeller->name }}</td>
-                            <td>{{ \DateTime::createFromFormat('H:i:s', $bestSeller->time_sort)->format('h:i a') }}</td>
+                            <td>{{ $bestSeller->name }} - {{ $bestSeller->number }}</td>
+                            <td>{{ $bestSeller->description }} - {{ \DateTime::createFromFormat('H:i:s', $bestSeller->time_sort)->format('h:i a') }}</td>
                             <td>{{ $bestSeller->amountPlayed }}</td>
                             <td>{{ number_format($bestSeller->totalPlayed, 2, ',', '.') }}</td>
                             <td>{{ number_format(($bestSeller->pay_per_100 / $bestSeller->amountTicket) * ($bestSeller->totalPlayed / 100), 2, ',', '.') }}</td>
