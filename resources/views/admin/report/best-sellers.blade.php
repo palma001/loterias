@@ -9,7 +9,21 @@
 @section('content')
 
     <div class="row">
-
+        <div class="col-xs-12">
+            <h3>Resultados de {{ $date->format('d-m-Y') }}</h3>
+            <div class="row">
+                <div class="col-sm-5">
+                    <input
+                        type="date"
+                        id="date"
+                        class="form-control"
+                        value="{{ $date->format('Y-m-d') }}"
+                        max="{{ $now->format('Y-m-d') }}"
+                        onchange="location.href = '{{ route('best-sellers') }}?date=' + $('#date').val()">
+                </div>
+            </div>
+            <hr>
+        </div>
         <div class="col-xs-12">
             <h3>
                 Lista de números mas jugados
